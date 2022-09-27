@@ -1,0 +1,13 @@
+Database Name : SPMDataB
+DNS Name : StudentDatabase
+Database username : system
+Database password : student
+
+Hard Coded Part which should be changed accordingly.
+----------------------------------------------------
+
+1) DownloadCurrentAbstract.jsp in Professor folder.
+   DownloadCurrentReport.jsp in Professor folder.
+   DownloadCurrentAbstract.jsp in Student folder.
+   DownloadCurrentReport.jsp in Student folder.
+   * Change the filepath variable to show 'currentAbstract' Folder and 'CurrentReport' folder accordingly.

@@ -1,0 +1,27 @@
+<a href="ProfessorProfile.jsp">Previous</a>|<a href="/StudentsProjectManagement/Login.jsp">Home</a>|<a href="/StudentsProjectManagement/SignOut.jsp">Sign Out</a><br>
+DateFormat.getDateInstance().format(c.getTime())
+
+Select SPMStudentMaster.RegisterNo,
+	SPMStudentMaster.StudentName,
+	SPMStudentMaster.Sex,
+	SPMStudentMaster.DateOfBirth,
+	SPMGroupRegister.Status 
+	From 
+	SPMStudentMaster,
+	SPMGroupRegister 
+	Where 
+	(SPMGroupRegister.GroupCode=" + groupCode + " 
+	And 
+	SPMStudentMaster.RegisterNo In 
+		(Select GR.RegisterNo 
+		From SPMGroupRegister GR 
+		Where
+		(GR.GroupCode=" + groupCode + "))) 
+		Group By 
+		SPMStudentMaster.RegisterNo,
+		SPMStudentMaster.StudentName,
+		SPMStudentMaster.Sex,
+		SPMStudentMaster.DateOfBirth,
+		SPMGroupRegister.Status 
+		Order By 
+		SPMStudentMaster.StudentName 
